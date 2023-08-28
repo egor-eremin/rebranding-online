@@ -6,12 +6,12 @@
 
 	@include tablet {
 		padding-top: 77px;
-		padding-bottom: 101px;
+		padding-bottom: 60px;
 	}
 
 	@include desktop {
 		padding-top: 100px;
-		padding-bottom: 117px;
+		padding-bottom: 80px;
 	}
 }
 
@@ -196,5 +196,17 @@
 		@include desktop {
 			height: 410px !important;
 		}
+
+		@media (min-width: 1024px) {
+			transform: translateX(-50%) scale(1.1);
+		}
+
+		@media (min-width: 1200px) {
+			transform: translateX(-50%) scale(1.2);
+		}
 	}
+}
+
+.program__wrapper {
+	overflow: hidden;
 }
