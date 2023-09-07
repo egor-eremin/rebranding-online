@@ -115,7 +115,8 @@ block vars
 			maskIcon: {
 				href: null,
 				color: null
-			}
+			},
+			canonicalUrl: null,
 		}
 
 doctype html
@@ -196,6 +197,8 @@ html(class="page " + html.classList)&attributes(html.attrs)
 		if title !== null
 			title!= title
 		block links
+			if link.canonicalUrl !== null
+				link(rel="canonical" href!=link.canonicalUrl)
 			if link.appvarouchIconPrecomposed !== null
 				link(rel="apple-touch-icon-precomposed" href!=link.appvarouchIconPrecomposed)
 			if link.appvarouchIconPrecomposed40x40 !== null
